@@ -5,7 +5,7 @@
   "description": "Game editor",
   "main": "app/main.js",
   "scripts": {
-    "build": "node rollup.dev.js"
+    "dev": "rollup -c rollup.dev.js -w"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "eslint-plugin-react": "^6.2.0",
     "rollup": "^0.34.10",
     "rollup-plugin-babel": "^2.6.1",
-    "rollup-plugin-vue2": "0.0.3"
+    "rollup-plugin-filesize": "^0.4.4",
+    "rollup-plugin-vue2": "0.0.3",
+    "rollup-watch": "^2.5.0"
   },
   "dependencies": {
     "axios": "^0.14.0",
