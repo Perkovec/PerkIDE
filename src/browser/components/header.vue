@@ -9,12 +9,12 @@
       getters: {
       },
       actions: {
-      }
+      },
     },
     data() {
-      return {}
+      return {};
     },
     methods: {
-    }
-  }
+    },
+  };
 </script>

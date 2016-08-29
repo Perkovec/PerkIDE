@@ -5,5 +5,8 @@
   },
   "rules": {
     "import/no-unresolved": 0
-  }
+  },
+  "plugins": [
+    "vue"
+  ]
 }

@@ -5,6 +5,8 @@
   "description": "Game editor",
   "main": "app/main.js",
   "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint src/** && eslint src/** --ext vue",
     "build:dev": "rollup -c rollup.dev.js"
   },
   "repository": {
@@ -25,6 +27,7 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
+    "eslint-plugin-vue": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-rollup": "^2.3.0",
     "gulp-watch": "^4.3.9",
