@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "PerkIDE";
+  src: url("../fonts/PerkIDE.eot");
+  src: url("../fonts/PerkIDE.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/PerkIDE.woff") format("woff"),
+       url("../fonts/PerkIDE.ttf") format("truetype"),
+       url("../fonts/PerkIDE.svg#PerkIDE") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "PerkIDE";
+    src: url("../fonts/PerkIDE.svg#PerkIDE") format("svg");
+  }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {   
+  font-family: PerkIDE;
+        font-size: 20px;
+font-style: normal;
+}
+
+.icon-control-drag:before { content: "\f100"; }
+.icon-control-move:before { content: "\f101"; }
+.icon-control-rotate:before { content: "\f102"; }
+.icon-control-zoom:before { content: "\f103"; }
