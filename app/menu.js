@@ -65,9 +65,130 @@ module.exports = () => {
       label: 'File',
       submenu: [
         {
-          label: 'Example',
-          accelerator: 'CmdOrCtrl+T',
-          click() {},
+          label: 'Open',
+          accelerator: 'CmdOrCtrl+O',
+          click() {
+            // TODO
+          },
+        },
+        {
+          label: 'Open Recent',
+          // TODO
+        },
+        {
+          type: 'separator',
+        },
+        {
+          label: 'Save',
+          accelerator: 'CmdOrCtrl+S',
+          click() {
+            // TODO
+          },
+        },
+        {
+          label: 'Save As',
+          accelerator: 'CmdOrCtrl+S+Shift',
+          click() {
+            // TODO
+          },
+        },
+        {
+          type: 'separator',
+        },
+      ],
+    },
+    {
+      label: 'Edit',
+      submenu: [
+        {
+          role: 'undo',
+        },
+        {
+          role: 'redo',
+        },
+        {
+          type: 'separator',
+        },
+        {
+          role: 'cut',
+        },
+        {
+          role: 'copy',
+        },
+        {
+          role: 'paste',
+        },
+        {
+          role: 'pasteandmatchstyle',
+        },
+        {
+          role: 'delete',
+        },
+        {
+          role: 'selectall',
+        },
+      ],
+    },
+    {
+      label: 'View',
+      submenu: [
+        {
+          label: 'Reload',
+          accelerator: 'CmdOrCtrl+R',
+          click(item, focusedWindow) {
+            if (focusedWindow) focusedWindow.reload();
+          },
+        },
+        {
+          role: 'togglefullscreen',
+        },
+        {
+          type: 'separator',
+        },
+        {
+          type: 'separator',
+        },
+        {
+          label: 'Toggle Developer Tools',
+          accelerator: process.platform === 'darwin' ? 'Alt+Command+I' : 'Ctrl+Shift+I',
+          click(item, focusedWindow) {
+            if (focusedWindow) focusedWindow.webContents.toggleDevTools();
+          },
+        },
+      ],
+    },
+    {
+      role: 'window',
+      submenu: [
+        {
+          label: 'Minimize',
+          accelerator: 'CmdOrCtrl+M',
+          role: 'minimize',
+        },
+        {
+          label: 'Zoom',
+          role: 'zoom',
+        },
+        {
+          type: 'separator',
+        },
+        {
+          label: 'Bring All to Front',
+          role: 'front',
+        },
+      ],
+    },
+    {
+      role: 'help',
+      submenu: [
+        {
+          label: 'Report bugs',
+          click() {
+            shell.openExternal('http://github.com/Perkovec/PerkIDE/issues');
+          },
+        },
+        {
+          type: 'separator',
         },
       ],
     },
@@ -122,16 +243,6 @@ module.exports = () => {
       about
     );
   }
-
-  template[template.length - 1].submenu.push(
-    {
-      label: 'Toggle Developer Tools',
-      accelerator: process.platform === 'darwin' ? 'Alt+Command+I' : 'Ctrl+Shift+I',
-      click(item, focusedWindow) {
-        if (focusedWindow) focusedWindow.webContents.toggleDevTools();
-      },
-    }
-  );
 
   return Menu.buildFromTemplate(template);
 };
