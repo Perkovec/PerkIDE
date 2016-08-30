@@ -7,7 +7,8 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint src/** && eslint src/** --ext vue",
-    "build:dev": "rollup -c rollup.dev.js"
+    "build:dev": "rollup -c rollup.dev.js",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,12 @@
     "gulp": "^3.9.1",
     "gulp-rollup": "^2.3.0",
     "gulp-watch": "^4.3.9",
+    "postcss-scss": "^0.2.1",
+    "precss": "^1.4.0",
     "rollup": "^0.34.10",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-filesize": "^0.4.4",
+    "rollup-plugin-postcss": "^0.1.1",
     "rollup-plugin-vue2": "0.0.3",
     "rollup-watch": "^2.5.0"
   },

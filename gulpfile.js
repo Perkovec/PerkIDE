@@ -15,12 +15,10 @@ function buildDev(cb) {
 
 gulp.task('build:dev', buildDev);
 
-let runned = false;
-gulp.task('dev', () => watch('./src/browser/**/*', { ignoreInitial: false }, () => {
+gulp.task('dev', () => {
   buildDev(() => {
-    if (!runned) {
-      exec('electron .');
-      runned = true;
-    }
+    exec('electron .');
+    console.log(new Date());
   });
-}));
+  watch('./src/browser/**/*', () => buildDev(() => console.log(new Date())));
+});
