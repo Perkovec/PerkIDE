@@ -3,4 +3,29 @@
   background-color: #727A7D;
   outline: none;
   font-size: 16px;
+  color: #EAEAEA;
+  border-radius: 4px;
+  margin: 3px;
+}
+
+.btn span:before {
+  font-size: 16px;
+}
+
+.btn-group {
+  margin: 3px;
+}
+
+.btn-group > .btn {
+  margin: 0px;
+  float: left;
+  border-radius: 0px;
+}
+
+.btn-group > .btn:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-group > .btn:first-child {
+  border-radius: 4px 0 0 4px;
 }

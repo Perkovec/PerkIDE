@@ -1,16 +1,27 @@
 <style>
   .header {
     background-color: #3E474C;
-    height: 35px;
+    height: 30px;
     width: 100%;
   }
 </style>
 
 <template>
   <header class="header">
-    <button class="btn">
-      <span class="icon-control-drag"></span>
-    </button>
+    <div class="btn-group">
+      <button class="btn">
+        <span class="icon-control-drag"></span>
+      </button>
+      <button class="btn">
+        <span class="icon-control-move"></span>
+      </button>
+      <button class="btn">
+        <span class="icon-control-rotate"></span>
+      </button>
+      <button class="btn">
+        <span class="icon-control-zoom"></span>
+      </button>
+    </div>
   </header>
 </template>
 
